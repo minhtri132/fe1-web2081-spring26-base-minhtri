@@ -9,4 +9,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   title = 'my-app';
+  fullName = 'Angular';
+  fullName2 = 'Angular Framework';
+  age = 7;
+
+//method: function
+  sayHello(){
+  console.log('Hello,');
+  alert('Hello,' + this.fullName);
 }
+}
+
