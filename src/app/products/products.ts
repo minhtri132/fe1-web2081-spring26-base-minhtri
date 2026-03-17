@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class Products {
   title = 'Danh sách sản phẩm';
+  
 }
