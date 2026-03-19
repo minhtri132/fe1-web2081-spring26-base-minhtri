@@ -3,7 +3,33 @@
     {
       "title": "naruto",
       "id": 1
+    },
+    {
+      "title": "dragon ball",
+      "author": "mninhtri",
+      "views": 123,
+      "price": 2213,
+      "category": "1",
+      "id": 2
+    },
+    {
+      "title": "jjk",
+      "author": "bao toan",
+      "views": 123,
+      "price": 123,
+      "category": "1",
+      "id": 3
     }
   ],
-  "users": []
+  "users": [],
+  "products": [
+    {
+      "title": "sadasd",
+      "author": "ádasd",
+      "views": 123,
+      "price": 123,
+      "category": "3",
+      "id": 1 
+    }
+  ]
 }

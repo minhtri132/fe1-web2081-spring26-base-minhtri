@@ -1,0 +1,56 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label>Title</label>
+        <input type="text" formControlName="title" class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+        @if (addForm.get('title')?.touched && addForm.get('title')?.invalid) {
+        <p style="color:red">Title không được để trống</p>
+        }
+    </div><br>
+
+    <div>
+        <label>Author</label>
+        <input type="text" formControlName="author"
+            class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+        @if (addForm.get('author')?.touched && addForm.get('author')?.invalid) {
+        <p style="color:red">Author không được để trống</p>
+        }
+    </div><br>
+
+
+    <div>
+        <label>Views</label>
+        <input type="number" formControlName="views"
+            class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+        @if (addForm.get('views')?.touched && addForm.get('views')?.invalid) {
+        <p style="color:red">Views phải >= 0</p>
+        }
+    </div><br>
+
+    <div>
+        <label>Price</label>
+        <input type="number" formControlName="price"
+            class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+        @if (addForm.get('price')?.touched && addForm.get('price')?.invalid) {
+        <p style="color:red">Price phải > 0</p>
+        }
+    </div><br>
+
+    <div>
+        <label>Category</label>
+        <select formControlName="category" class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4">
+            <option value="">-- Chọn danh mục --</option>
+            @for (c of categories; track c.id) {
+            <option [value]="c.id">{{ c.name }}</option>
+            }
+        </select>
+    </div>
+        @if (addForm.get('category')?.touched && addForm.get('category')?.invalid) {
+        <p style="color:red">Vui lòng chọn category</p>
+        }
+
+        <br /><br />
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Thêm
+            truyện</button>
+
+</form>

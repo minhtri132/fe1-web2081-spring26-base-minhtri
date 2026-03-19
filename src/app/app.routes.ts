@@ -6,6 +6,7 @@ import { Products } from './products/products';
 import { Stories } from './pages/stories/stories';
 import { StoryAdd } from './story-add/story-add';
 import { RegisterComponent } from './register/register';
+import { ProductAdd } from './product-add/product-add';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'stories', component: Stories },
   { path: 'products', component: Products },
   { path: 'story-add', component: StoryAdd },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'product-add', component: ProductAdd }
 ];
