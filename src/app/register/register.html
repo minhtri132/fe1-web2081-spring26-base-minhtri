@@ -1,0 +1,29 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <label>Username</label>
+  <input type="text" formControlName="username" class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+
+  @if (registerForm.get('username')?.touched && registerForm.get('username')?.invalid) {
+    <p style="color:red">Username phải >= 3 ký tự</p>
+  }
+
+  <label>Email</label>
+  <input type="email" formControlName="email" class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+
+  @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+    <p style="color:red">Email không hợp lệ</p>
+  }
+
+  <label>Password</label>
+  <input type="password" formControlName="password" class="hover:bg-gray-200 border border-gray-300 rounded py-2 px-4" />
+
+  @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
+    <p style="color:red">Password phải >= 6 ký tự</p>
+  }
+
+  <br /><br />
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Đăng ký
+  </button>
+
+</form>
