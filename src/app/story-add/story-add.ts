@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Form, FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-story-add',
   imports: [ReactiveFormsModule],
@@ -20,6 +20,7 @@ export class StoryAdd {
 
   submitForm(){
     console.log(this.addForm.value);
+    
   }
 
 }
